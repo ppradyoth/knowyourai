@@ -1,0 +1,25 @@
+name: knowyourai
+description: Fail the build when an open-weight model pinned in ai.lock has changed.
+branding:
+  icon: check-circle
+  color: blue
+inputs:
+  command:
+    description: "check (verify ai.lock) or scan."
+    required: false
+    default: "check"
+  args:
+    description: Extra arguments, for example "--strict" or "models --fail-on high".
+    required: false
+    default: ""
+runs:
+  using: composite
+  steps:
+    - uses: astral-sh/setup-uv@v3
+    - shell: bash
+      env:
+        KYAI_COMMAND: ${{ inputs.command }}
+        KYAI_ARGS: ${{ inputs.args }}
+      run: |
+        read -r -a extra <<< "$KYAI_ARGS"
+        uvx knowyourai "$KYAI_COMMAND" "${extra[@]}"

@@ -1,0 +1,7 @@
+- id: knowyourai-check
+  name: knowyourai check
+  description: Fail if a model pinned in ai.lock has changed.
+  entry: knowyourai check
+  language: python
+  pass_filenames: false
+  always_run: true
