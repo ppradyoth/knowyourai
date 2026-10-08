@@ -1,5 +1,10 @@
 # knowyourai
 
+[![PyPI](https://img.shields.io/pypi/v/knowyourai)](https://pypi.org/project/knowyourai/)
+[![Python](https://img.shields.io/pypi/pyversions/knowyourai)](https://pypi.org/project/knowyourai/)
+[![CI](https://github.com/ppradyoth/knowyourai/actions/workflows/ci.yml/badge.svg)](https://github.com/ppradyoth/knowyourai/actions/workflows/ci.yml)
+[![License](https://img.shields.io/pypi/l/knowyourai)](LICENSE)
+
 **Is the model on your machine the model it claims to be?**
 
 You pulled a 5 GB file from a stranger's repo. The model card says which model it is, what licence
@@ -38,7 +43,16 @@ the original publisher wrote, and a chat template is a program that runs on ever
 Model scanners look for malware in a file. This tool asks a different question: is this the model
 the label says it is, and has it changed since you approved it?
 
-Status: alpha.
+Status: alpha, published on [PyPI](https://pypi.org/project/knowyourai/).
+
+## Install
+
+```bash
+uvx knowyourai scan          # run without installing
+pip install knowyourai       # or install it
+```
+
+Python 3.11 or newer. No dependencies.
 
 ## Tested on real models
 

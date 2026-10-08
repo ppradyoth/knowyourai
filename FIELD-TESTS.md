@@ -1,6 +1,6 @@
 # Field tests
 
-What happened when `knowyourai` 0.1.0 was run against real models. Everything here is tool output
+What happened when [`knowyourai` 0.1.0](https://pypi.org/project/knowyourai/0.1.0/) was run against real models. Everything here is tool output
 from 8 October 2026, on an Apple Silicon Mac with Python 3.13, with no Hugging Face token set.
 
 A status describes what the checks found in the files and metadata. It is not a judgement of the

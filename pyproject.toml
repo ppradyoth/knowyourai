@@ -23,6 +23,7 @@ dependencies = []
 [project.urls]
 Homepage = "https://github.com/ppradyoth/knowyourai"
 Issues = "https://github.com/ppradyoth/knowyourai/issues"
+PyPI = "https://pypi.org/project/knowyourai/"
 
 [project.scripts]
 knowyourai = "knowyourai.cli:main"
