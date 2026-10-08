@@ -40,6 +40,22 @@ the label says it is, and has it changed since you approved it?
 
 Status: alpha.
 
+## Tested on real models
+
+Run against real repos on the Hugging Face Hub, with nothing downloaded:
+
+| Repo | Listed size | Time | Result |
+|---|---|---|---|
+| `unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF` | 471.6 GB | 7.4 s | template differs from the base model's (a labelled fix) |
+| `Qwen/Qwen3-4B-GGUF` | 14.7 GB | 6.5 s | template differs from the publisher's own safetensors repo |
+| `google/gemma-4-E2B-it-qat-q4_0-gguf` | 4.0 GB | 14.6 s | template identical, structure matches |
+| `jinaai/jina-embeddings-v3` | 5.4 GB | 9.8 s | config loads model code from a second repository |
+| `microsoft/Phi-3-mini-4k-instruct` | 7.1 GB | 5.4 s | config maps to Python code shipped in the repo |
+
+Fourteen remote scans, a local run with digest verification, the 200-repo study with a
+per-publisher breakdown, 21 attack fixtures, the three bugs real data exposed in this tool, and
+what has not been tested yet are all in **[FIELD-TESTS.md](FIELD-TESTS.md)**.
+
 ## Use it
 
 ```bash
